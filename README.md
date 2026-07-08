@@ -1,7 +1,7 @@
 # IMDB Sentiment Analysis: Classical NLP vs. Neural Networks
 
 ## Project Overview
-The project compares two fundamentally different approaches to sentiment analysis on the **IMDB movie reviews dataset**: classical NLP pipelines (TF-IDF + traditional ML classifiers) versus a neural network approach (SimpleRNN with word embeddings). The goal was to test a common assumption in NLP — that deep learning models automatically outperform classical methods — and evaluate it directly against a real dataset.
+The project compares two fundamentally different approaches to sentiment analysis on the **IMDB movie reviews dataset**: classical NLP pipelines (TF-IDF + traditional ML classifiers) versus a neural network approach (SimpleRNN with word embeddings). The goal was to test a common assumption in NLP that deep learning models automatically outperform classical methods and evaluate it directly against a real dataset.
 
 ## Key Findings
 | Approach | Accuracy | Notes |
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ```
 
 ## Conclusion
-This project's core takeaway goes against a common default assumption in applied ML: bigger/more complex models are not automatically better. A carefully engineered classical NLP pipeline (TF-IDF + Logistic Regression/SVM) beat a neural network by roughly 38 percentage points on this task, while also being faster to train, easier to interpret, and simpler to deploy in production. The neural network's underperformance traces back to a specific, identifiable cause — loss of word order from averaging embeddings — rather than the architecture being inherently unsuitable, pointing to sequence-preserving alternatives (e.g. LSTM/GRU without averaging, or attention-based pooling) as the natural next step if the neural approach were to be revisited.
+This project's core takeaway goes against a common default assumption in applied ML: bigger/more complex models are not automatically better. A carefully engineered classical NLP pipeline (TF-IDF + Logistic Regression/SVM) beat a neural network by roughly 38 percentage points on this task, while also being faster to train, easier to interpret, and simpler to deploy in production. The neural network's underperformance traces back to a specific, identifiable cause loss of word order from averaging embeddings rather than the architecture being inherently unsuitable, pointing to sequence-preserving alternatives (e.g. LSTM/GRU without averaging, or attention-based pooling) as the natural next step if the neural approach were to be revisited.
 
 ## Author
 **Muqadas Yasin**
